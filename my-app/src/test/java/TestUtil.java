@@ -27,5 +27,14 @@ public class TestUtil {
     c.compute(0,1,2);
   }
 
+  @Test
+  public void testDivisible(){
+    assertTrue(c.compute(1,2,3));
+  }
+
+  @Test
+  public void testNotDivisible(){
+    assertFalse(c.compute(2,3,6));
+  }
 
 }
