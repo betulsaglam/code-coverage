@@ -1,9 +1,7 @@
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class TestUtil {
   Util c;
@@ -13,4 +11,21 @@ public class TestUtil {
 
   @Test
   public void example() { assertTrue(true); }
+
+  @Test
+  public void testLengthOne(){
+    assertFalse(c.compute(1));
+  }
+
+  @Test
+  public void testLengthEven(){
+    assertFalse(c.compute());
+  }
+
+  @Test(expected = RuntimeException.class)
+  public void testException(){
+    c.compute(0,1,2);
+  }
+
+
 }
